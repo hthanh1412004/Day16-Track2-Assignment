@@ -1,6 +1,6 @@
 # Báo cáo Lab 16 — AWS CPU LightGBM
 
-1. Tôi triển khai bài lab trên AWS tại region `us-east-1`, sử dụng Compute Node `t3.micro` (2 vCPU, khoảng 1 GiB RAM). Source dựa trên commit `55539f6`, với `cpu_instance_type` được điều chỉnh từ `t3.medium` xuống `t3.micro`.(bị lỗi với t3.medium, đã hỏi lab coach và đồng ý cho đổi)
+1. Tôi triển khai bài lab trên AWS tại region `us-east-1`, sử dụng Compute Node `t3.micro` (2 vCPU, khoảng 1 GiB RAM). Source dựa trên commit `554e983`, với `cpu_instance_type` được điều chỉnh từ `t3.medium` xuống `t3.micro` (bị lỗi với `t3.medium`, đã hỏi Lab Coach và được đồng ý cho đổi).
 2. Dataset Credit Card Fraud Detection có 284.807 dòng, trong đó 492 dòng thuộc lớp fraud. Dữ liệu được chia theo tỷ lệ 60% train, 20% validation và 20% test, tương ứng 170.883/56.962/56.962 dòng, dùng seed 16 và stratify theo nhãn `Class`.
 3. Lần đo được ghi lúc 18:32 ngày 03/10/2026 (GMT+7): thời gian đọc dữ liệu là 2,400 giây, thời gian huấn luyện là 3,524 giây và LightGBM dừng sớm tại iteration 68.
 4. Trên tập test, mô hình đạt AUC 0,976848; Accuracy 0,999508; F1 0,847826; Precision 0,906977 và Recall 0,795918. AUC được tính từ xác suất dự đoán, còn các chỉ số phân loại dùng ngưỡng 0,5.
